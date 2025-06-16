@@ -1,205 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>XLayer AI - Explore Vision</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XLayerAI - Cyber Mentor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #0a0f1c;
-      color: #ffffffcc;
       font-family: 'Inter', sans-serif;
+      background-color: #0a0f1c;
+      color: #f0f0f0;
       padding: 2rem;
-      line-height: 1.8;
     }
     h1 {
       font-size: 3rem;
-      color: #3ae3ff;
+      color: #62e9f8;
       text-align: center;
-      margin-bottom: 1rem;
     }
     h2 {
       font-size: 2rem;
       color: #7cf5a1;
-      margin-top: 2rem;
+      text-align: center;
+      margin-top: 0.5rem;
     }
-    h3 {
-      font-size: 1.5rem;
-      color: #ffd580;
-      margin-top: 1.5rem;
-    }
-    p, ul {
-      margin-top: 1rem;
-    }
-    ul li {
-      margin-bottom: 0.5rem;
-    }
-    .section {
-      margin-bottom: 2.5rem;
-      border-bottom: 1px solid #2c2f3f;
-      padding-bottom: 1.5rem;
-    }
-    .chatbot-button {
+    button.chatbot-button {
       display: block;
-      margin: 1.5rem auto;
-      background-color: #00f7ff;
-      padding: 0.75rem 2rem;
+      margin: 2rem auto;
+      background: #00f7ff;
       color: #000;
-      font-weight: bold;
-      border-radius: 8px;
-      border: none;
+      padding: 1rem 2.5rem;
       font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00f7ff90;
     }
-    .tools-grid {
+    .example-prompts, .tools-section {
+      margin-top: 3rem;
+    }
+    .example-prompts ul, .tools-section ul {
+      list-style-type: none;
+      padding: 0;
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
       justify-content: center;
-      margin-top: 2rem;
+      gap: 1rem;
     }
-    .tool-card {
-      background-color: #1b2236;
+    .example-prompts li, .tools-section li {
+      background: #151d2c;
       padding: 1rem;
       border-radius: 10px;
-      flex: 1 1 200px;
-      max-width: 250px;
+      flex: 1 1 220px;
+      max-width: 300px;
       text-align: center;
-      color: #c6dfff;
+      box-shadow: 0 0 10px #1e2a3d;
     }
-    .ceo {
+    .chatbox {
       margin-top: 3rem;
+      background: #121a2f;
+      padding: 2rem;
+      border-radius: 12px;
+    }
+    .chatbox h3 {
+      font-size: 1.6rem;
+      color: #ffc680;
+    }
+    .footer {
       text-align: center;
-      font-size: 1.3rem;
-      color: #ff80bf;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    .footer a {
+      color: #66e5ff;
+      margin: 0 0.5rem;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <h1>XLayer AI</h1>
-  <p style="text-align: center; font-size: 1.2rem; color: #ddd;">World's 1st AI-Powered Cybersecurity Brain</p>
-  <button class="chatbot-button">Launch Chatbot</button>
+  <h1>XLayerAI</h1>
+  <h2>World's 1st LLM for Cybersecurity</h2>
+  <button class="chatbot-button">🚀 Launch Chatbot</button>
 
-  <div class="tools-grid">
-    <div class="tool-card"><strong>PhishShield</strong><br/>Detect & analyze phishing emails</div>
-    <div class="tool-card"><strong>Red Team</strong><br/>Advanced offensive AI testing</div>
-    <div class="tool-card"><strong>Blue Team</strong><br/>Live defense, malware, log analysis</div>
-    <div class="tool-card"><strong>ReconX</strong><br/>Automated recon & PoC generation</div>
-  </div>
-
-  <div class="section">
-    <h2>🤖 Red Team & Blue Team Empowerment</h2>
-    <p><strong>XLayer AI enhances both offensive and defensive cyber operations through real-time intelligence.</strong></p>
-    <h3>For Red Team:</h3>
+  <div class="example-prompts">
+    <h3 style="text-align: center; color: #9cc9ff;">Example Prompts</h3>
     <ul>
-      <li>Suggests payloads and bypasses based on context</li>
-      <li>Generates chaining logic and recon insights</li>
-      <li>Automates report writing with proper format</li>
-      <li>Emulates attacker behaviors using XIC</li>
-    </ul>
-    <h3>For Blue Team:</h3>
-    <ul>
-      <li>Analyzes logs to identify suspicious behavior</li>
-      <li>Detects malware/ransomware before they trigger</li>
-      <li>Visualizes threat intel using ThreatGraph</li>
-      <li>Runs suspicious files in Sandbox AI</li>
-    </ul>
-    <p>This dual capability makes XLayer AI the only AI assistant designed for full-spectrum cybersecurity operations — from attack simulation to proactive defense.</p>
-  </div>
-
-  <div class="section">
-    <h2>🧠 What is XLayer AI?</h2>
-    <p>XLayer AI is the world’s first LLM cybersecurity engine capable of simulating attacker logic, identifying threat patterns, suggesting defenses, and teaching ethical hacking step-by-step — all powered by the X Intelligence Core (XIC).</p>
-    <p>It's not just a chatbot — it's your hacking mentor, defensive assistant, bug bounty buddy, and real-time threat hunter in one interface.</p>
-  </div>
-
-  <div class="section">
-    <h2>🚨 Why XLayer Must Exist</h2>
-    <ul>
-      <li>Antivirus is broken — reactive and late</li>
-      <li>Email filters still miss phishing daily</li>
-      <li>Cyber learning is scattered and slow</li>
-      <li>Logs are hard to analyze for most teams</li>
-      <li>Bug bounty requires high technical expertise</li>
-    </ul>
-    <p>XLayer bridges this gap with one central AI brain.</p>
-  </div>
-
-  <div class="section">
-    <h2>🧬 Powered by X Intelligence Core (XIC)</h2>
-    <ul>
-      <li>Understands logs, payloads, and attack flows</li>
-      <li>Builds chaining logic and recon scripts</li>
-      <li>Supports JS, Bash, Python, Go, and more</li>
-      <li>Suggests PoCs and auto-generates reports</li>
-      <li>Mimics attacker behavior to simulate red team ops</li>
-    </ul>
-    <p>We're scaling from 500M → 1B → 100B parameters to power the future of defense AI.</p>
-  </div>
-
-  <div class="section">
-    <h2>🛡️ SafeVault & Sandbox AI</h2>
-    <h3>SafeVault</h3>
-    <ul>
-      <li>Behavioral detection of ransomware before encryption starts</li>
-      <li>Interrupts file rename, encryption, and ransom note drops</li>
-      <li>Adaptive AI that evolves with new threats</li>
-    </ul>
-    <h3>Sandbox AI</h3>
-    <ul>
-      <li>Runs suspicious files in containerized VMs</li>
-      <li>Tracks memory, network, registry, and disk behavior</li>
-      <li>Explains malware behavior in real-time</li>
+      <li>Teach me how to find XSS vulnerabilities</li>
+      <li>Analyze this email for phishing indicators</li>
+      <li>Generate a payload for IDOR testing</li>
+      <li>Explain SQL injection fundamentals</li>
+      <li>How to perform reconnaissance ethically</li>
+      <li>Create a phishing awareness training</li>
     </ul>
   </div>
 
-  <div class="section">
-    <h2>🛠️ XLayer Tools</h2>
+  <div class="chatbox">
+    <h3># Welcome to XLayerAI! 🛡️</h3>
+    <p>I'm your AI cybersecurity mentor. I can help you with:</p>
     <ul>
-      <li><strong>XBot:</strong> ChatGPT-style cybersecurity mentor</li>
-      <li><strong>PhishShield:</strong> AI phishing detector from raw headers</li>
-      <li><strong>ReconX:</strong> AI-powered recon & endpoint discovery</li>
-      <li><strong>LeakHunter:</strong> API/secret/token scanner in JS, GitHub</li>
-      <li><strong>CVEExplain:</strong> CVE summary, PoC, fix and exploit paths</li>
-      <li><strong>PayloadGen:</strong> Payload chaining & PoC builder</li>
-      <li><strong>LogMind:</strong> Detects suspicious patterns in system logs</li>
-      <li><strong>ThreatGraph:</strong> AI-generated threat visualizer</li>
+      <li><strong>Ethical Hacking Techniques</strong></li>
+      <li><strong>Bug Bounty Hunting</strong></li>
+      <li><strong>Penetration Testing</strong></li>
+      <li><strong>Security Analysis</strong></li>
     </ul>
+    <p>Ask about ethical hacking, bug bounty, or cybersecurity...</p>
   </div>
 
-  <div class="section">
-    <h2>🎓 Who Can Use XLayer?</h2>
+  <div class="tools-section">
+    <h3 style="text-align: center; color: #9cc9ff;">Key Capabilities</h3>
     <ul>
-      <li>Students learning cybersecurity</li>
-      <li>Bug bounty hunters and red teamers</li>
-      <li>Blue teams and SOC analysts</li>
-      <li>Educators teaching secure practices</li>
-      <li>Developers securing their own apps</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>📈 Future Vision</h2>
-    <p>In 10 years, we believe:</p>
-    <ul>
-      <li>Every SOC will use an AI like XLayer</li>
-      <li>Antivirus will be replaced by intelligent defenders</li>
-      <li>Threats will evolve — but so will our LLMs</li>
-      <li>XLayer will be the first self-learning cybersecurity OS</li>
-    </ul>
-    <p>It will teach, defend, simulate, and evolve in real-time.</p>
-  </div>
-
-  <div class="section">
-    <h2>🔐 Ethics & Controls</h2>
-    <ul>
-      <li>Prompt filtering blocks illegal abuse</li>
-      <li>Payloads come with usage warnings</li>
-      <li>Logged interactions for audit & research</li>
-      <li>White-hat only. Zero tolerance for black-hat use.</li>
-    </ul>
-  </div>
-
-  <div class="ceo">👨‍💼 Founder & CEO: <strong>Sandesh Poudel</strong></div>
-</body>
-</html>
+      <li><strong>Ask Hacking Questions</strong><br/>Get expert guidance on ethical hacking techniques</li>
+      <li><strong>Bug Bounty Payloads</strong><br/>Generate and test security payloads safely</li>
+      <li><strong>Analyze Phishing</strong><br/>Learn to identify and analyze phishing attempts</li>
+      <li><
