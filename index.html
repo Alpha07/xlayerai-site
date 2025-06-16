@@ -1,120 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XLayerAI - Your AI-Powered Cybersecurity Copilot</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-[#0D1117] text-white font-sans">
-    <!-- Navigation Menu -->
-    <header class="p-4 flex justify-between items-center bg-[#0D1117] border-b border-gray-800">
-      <h1 class="text-3xl font-extrabold tracking-tight">XLayerAI</h1>
-      <div class="relative">
-        <button id="menuButton" class="text-white focus:outline-none">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-        <div id="dropdownMenu" class="absolute right-0 mt-2 w-40 bg-[#1E293B] rounded shadow-lg hidden">
-          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Settings</a>
-          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Login</a>
-          <a href="#vision" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Vision</a>
-        </div>
-      </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col justify-center items-center p-10 text-center">
-      <h1 class="text-7xl sm:text-8xl font-extrabold bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 bg-clip-text text-transparent mb-6 drop-shadow-lg">
-        XLayerAI
-      </h1>
-      <h2 class="text-2xl sm:text-4xl font-bold text-white mb-6">
-        The World’s First AI Copilot for Cybersecurity, Bug Bounty, and Hacking Education
-      </h2>
-      <p class="max-w-3xl text-xl text-gray-300 leading-relaxed mb-10">
-        Learn to hack ethically, detect phishing and malware, and automate bug bounty tasks with XLayer’s custom cybersecurity LLM.
-      </p>
-      <a href="#vision" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl text-xl shadow-lg transition">
-        Explore Our Vision
-      </a>
-    </section>
-
-    <!-- Features Section -->
-    <section class="bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#0F172A] py-20 px-10">
-      <h3 class="text-5xl font-bold text-center mb-16 text-white drop-shadow-xl">Core Modules & Tools</h3>
-      <div class="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
-        <div class="p-8 bg-[#1E293B] rounded-2xl shadow-lg hover:shadow-purple-600/30 transition-all hover:-translate-y-1">
-          <h4 class="text-2xl font-semibold text-purple-400 mb-4">PhishShield</h4>
-          <p class="text-gray-400 text-lg">LLM-powered phishing detection that scores and explains email threats in real-time.</p>
-        </div>
-        <div class="p-8 bg-[#1E293B] rounded-2xl shadow-lg hover:shadow-pink-600/30 transition-all hover:-translate-y-1">
-          <h4 class="text-2xl font-semibold text-pink-400 mb-4">SafeVault</h4>
-          <p class="text-gray-400 text-lg">Behavioral malware detection via sandboxed execution and LLM interpretation.</p>
-        </div>
-        <div class="p-8 bg-[#1E293B] rounded-2xl shadow-lg hover:shadow-blue-600/30 transition-all hover:-translate-y-1">
-          <h4 class="text-2xl font-semibold text-blue-400 mb-4">ReconX</h4>
-          <p class="text-gray-400 text-lg">Automated reconnaissance and PoC generation for bug bounty and red teamers.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Vision Section -->
-    <section id="vision" class="bg-[#0F172A] py-20 px-10 text-gray-200">
-      <h3 class="text-4xl sm:text-5xl font-bold text-center mb-14">XLayer AI: Vision & White Paper (2025–2035)</h3>
-      <div class="max-w-5xl mx-auto space-y-6 text-lg leading-loose">
-        <p><strong>Our Mission:</strong> Democratize cybersecurity with an ethical AI that prevents phishing, malware, ransomware, and zero-days in real-time.</p>
-        <p><strong>Why We Exist:</strong> Most tools are reactive. XLayer is proactive — trained to think like hackers and stop them before damage is done.</p>
-
-        <p><strong>🔥 What Sets Us Apart:</strong></p>
-        <ul class="list-disc pl-6 space-y-2">
-          <li>🧠 Custom cybersecurity LLM trained on real-world data: CVEs, phishing kits, exploit chains, malware logs</li>
-          <li>💬 Chatbot for ethical hacking education & bug bounty automation</li>
-          <li>🔍 PhishShield: real-time email + link + header scanning and scoring</li>
-          <li>🔐 SafeVault: sandbox execution of suspicious files/scripts</li>
-          <li>🛠️ ReconX: Automated recon, endpoint discovery, PoC payload generation</li>
-        </ul>
-
-        <p><strong>🧠 LLM Development Roadmap:</strong></p>
-        <ul class="list-disc pl-6">
-          <li>📅 Phase 1: 500M Parameters (Year 1) – Chatbot + PhishShield</li>
-          <li>📅 Phase 2: 1B Parameters (Year 2) – SafeVault + Malware Behavior Engine</li>
-          <li>📅 Phase 3: 7B+ Parameters (Year 3+) – Self-updating AI firewall trained on live threat data</li>
-        </ul>
-
-        <p><strong>🚀 Future Vision (2030+):</strong></p>
-        <ul class="list-disc pl-6">
-          <li>⚡ Instantly detect new threats without signature updates</li>
-          <li>👨‍💻 Help bug bounty hunters write and submit full reports with auto-generated PoCs</li>
-          <li>🔍 Explain every detection in plain English — like a human mentor</li>
-          <li>🌐 Global defense layer for NGOs, schools, SMBs without SOCs</li>
-          <li>🎓 Interactive cybersecurity learning platform powered by XBot</li>
-        </ul>
-
-        <p><strong>👨‍💼 About the Founder:</strong> Sandesh Poudel — "We're not building an antivirus. We're building cybersecurity's first ethical defense brain."</p>
-      </div>
-    </section>
-
-    <!-- Waitlist CTA -->
-    <section class="bg-[#0D1117] py-20 px-10 text-center">
-      <h3 id="waitlist" class="text-4xl font-bold mb-6 text-white">Join the Waitlist</h3>
-      <p class="text-gray-400 mb-6 text-xl">Be the first to use our hacking assistant, phishing scanner, and real-time malware defense LLM.</p>
-      <a href="#" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-10 rounded-xl text-lg shadow-md transition">
-        Get Early Access
-      </a>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-black text-center py-6 text-gray-600 text-sm">
-      &copy; 2025 XLayerAI. All rights reserved.
-    </footer>
-
-    <script>
-      const menuButton = document.getElementById('menuButton');
-      const dropdownMenu = document.getElementById('dropdownMenu');
-      menuButton.addEventListener('click', () => {
-        dropdownMenu.classList.toggle('hidden');
-      });
-    </script>
-  </body>
-</html>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore the Vision | XLayer AI</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body { background-color: #0e1a2b; color: white; font-family: Arial, sans-serif; padding: 2rem; line-height: 1.7; }
+    h1, h2, h3 { color: #8af; }
+    a { color: #7fffd4; }
+    .section { margin-bottom: 2rem; }
+    .highlight { color: #00ffcc; font-weight: bold; }
+    .ceo { font-size: 1.5rem; color: #ff99cc; margin-top: 4rem; }
+  </style>
+</head>
+<body>
+  <h1>🧠 XLayer AI: Building the Cybersecurity Intelligence Core of the Future</h1>
+  <div class="section">
