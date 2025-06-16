@@ -6,6 +6,9 @@
   <title>XLayerAI - World's 1st LLM for Cybersecurity</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -14,32 +17,37 @@
     }
     header {
       background-color: #121a2f;
-      padding: 1rem 2rem;
+      padding: 1rem 1.5rem;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
+    header nav {
+      display: flex;
+      flex-wrap: wrap;
+    }
     header nav a {
       color: #a0d7ff;
       text-decoration: none;
-      margin: 0 1rem;
+      margin: 0.5rem 1rem;
     }
     .logo {
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: bold;
       color: #68fbd0;
     }
     .main {
       text-align: center;
-      padding: 4rem 2rem;
+      padding: 4rem 1.5rem;
     }
     .main h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: #a1f0ff;
     }
     .main p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #a9bcd8;
       margin-top: 0.5rem;
     }
@@ -60,13 +68,14 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
-      margin: 4rem 2rem;
+      margin: 2rem 1rem 4rem 1rem;
     }
     .tool-box {
       background: #19253a;
-      padding: 1.5rem;
+      padding: 1.2rem;
       border-radius: 10px;
-      max-width: 250px;
+      flex: 1 1 250px;
+      max-width: 300px;
       box-shadow: 0 0 10px #1e2a3d;
     }
     .tool-box h3 {
@@ -75,7 +84,7 @@
     .footer {
       background: #101926;
       text-align: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
       font-size: 0.9rem;
       color: #88a0b8;
     }
@@ -85,21 +94,34 @@
       text-decoration: none;
     }
     .whitepaper {
-      max-width: 960px;
-      margin: 4rem auto;
-      padding: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem 1rem;
       background: #111a2d;
       border-radius: 10px;
     }
     .whitepaper h2 {
       text-align: center;
       color: #82faff;
+      font-size: 1.6rem;
     }
     .whitepaper p {
       margin-top: 1rem;
       line-height: 1.7;
       color: #ccd6e1;
       white-space: pre-line;
+    }
+    @media (max-width: 600px) {
+      .main h1 {
+        font-size: 2rem;
+      }
+      .launch-btn {
+        width: 100%;
+      }
+      .tool-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
     }
   </style>
 </head>
