@@ -1,0 +1,177 @@
+.xl-chat-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+  background: var(--gradient);
+  color: #0c1427;
+  font-weight: 800;
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 24px #00ffe760, 0 2px 8px #0006;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2147483000;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.xl-chat-button:hover,
+.xl-chat-button:focus {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 32px #00ffe780, 0 4px 16px #0008;
+}
+
+.xl-chat-panel {
+  position: fixed;
+  right: 20px;
+  bottom: 84px;
+  width: 340px;
+  max-width: calc(100vw - 40px);
+  height: 420px;
+  background: var(--bg-dark);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 16px 48px #0008, 0 0 48px #00ffe720;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 2147483000;
+  opacity: 0;
+  transform: translateY(8px) scale(0.98);
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.xl-chat-panel.xl-open {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.xl-chat-header {
+  background: var(--glass);
+  backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.xl-chat-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+}
+
+.xl-chat-close {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 10px;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.xl-chat-messages {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  background: var(--bg-gradient);
+}
+
+.xl-chat-row {
+  display: flex;
+  margin: 8px 0;
+}
+
+.xl-chat-bubble {
+  max-width: 85%;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px #0006;
+}
+
+.xl-chat-bubble.assistant {
+  background: #131b30;
+  border: 1px solid var(--border);
+  color: var(--white);
+}
+
+.xl-chat-bubble.user {
+  background: #0f1a2f;
+  border: 1px solid var(--primary);
+  color: var(--white);
+}
+
+.xl-chat-inputbar {
+  border-top: 1px solid var(--border);
+  background: var(--bg-dark);
+  padding: 10px;
+}
+
+.xl-chat-inputwrap {
+  display: flex;
+  gap: 8px;
+}
+
+.xl-chat-input {
+  flex: 1;
+  min-height: 40px;
+  max-height: 120px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #0f1a2f;
+  color: var(--white);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.xl-chat-input::placeholder {
+  color: var(--muted);
+}
+
+.xl-chat-send {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #0f1a2f;
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.xl-chat-send:hover,
+.xl-chat-send:focus {
+  background: #14233d;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+  .xl-chat-panel {
+    right: 12px;
+    left: 12px;
+    width: auto;
+    height: 60vh;
+  }
+  .xl-chat-button {
+    right: 12px;
+    bottom: 12px;
+  }
+}
+

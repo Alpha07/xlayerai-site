@@ -350,6 +350,12 @@
       to { opacity: 1; transform: none;}
     }
   </style>
+  <script type="module">
+    import { mountChatWidget } from '/src/components/ChatWidget.tsx'
+    window.addEventListener('DOMContentLoaded', () => {
+      try { mountChatWidget() } catch {}
+    })
+  </script>
 </head>
 <body>
   <header>
