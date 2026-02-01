@@ -1,13 +1,257 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ask anything about cybersecurity...</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XLayer AI: Research & Development Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap');
+        
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fafafa; color: #171717; }
+        .font-mono { font-family: 'Fira Code', monospace; }
+        
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            margin: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(229, 231, 235, 0.5);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ef4444 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .step-active { border-left: 4px solid #3b82f6; background: #eff6ff; }
+    </style>
+    </head>
+<body class="min-h-screen">
+
+    <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-lg border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-black rounded flex items-center justify-center">
+                    <span class="text-white font-bold text-xs">XL</span>
+                </div>
+                <h1 class="text-xl font-bold tracking-tight">XLayer <span class="text-red-600">AI</span></h1>
+            </div>
+            <nav class="hidden md:flex gap-8 text-sm font-medium text-gray-500">
+                <button onclick="scrollToSec('vision')" class="hover:text-black transition-colors">Vision</button>
+                <button onclick="scrollToSec('architecture')" class="hover:text-black transition-colors">Architecture</button>
+                <button onclick="scrollToSec('agent')" class="hover:text-black transition-colors">Agent Simulator</button>
+                <button onclick="scrollToSec('roadmap')" class="hover:text-black transition-colors">Roadmap</button>
+            </nav>
+            <div class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">RESEARCH ACTIVE</div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        
+        <section id="vision" class="mb-20 text-center">
+            <h2 class="text-5xl font-extrabold mb-6 tracking-tight">The 1B Bug-Hunting <span class="gradient-text">Revolution</span></h2>
+            <p class="max-w-2xl mx-auto text-gray-600 text-lg leading-relaxed">
+                XLayer AI is designed to surpass Xbow by integrating <strong>internal tool synthesis</strong>. 
+                It doesn't just call scripts; it creates them, adapts to environment responses, and thinks recursively.
+            </p>
+            
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="p-6 glass-card rounded-2xl">
+                    <div class="text-2xl mb-2">🧠</div>
+                    <h3 class="font-bold text-lg mb-2">Recursive Reasoning</h3>
+                    <p class="text-sm text-gray-500">Self-correction loops that allow the 1B model to verify its own "Thoughts" before taking action.</p>
+                </div>
+                <div class="p-6 glass-card rounded-2xl">
+                    <div class="text-2xl mb-2">💻</div>
+                    <h3 class="font-bold text-lg mb-2">Internal Scripting</h3>
+                    <p class="text-sm text-gray-500">No static tool calls. The model writes Python code on-the-fly to handle specific packet crafting or logic flaws.</p>
+                </div>
+                <div class="p-6 glass-card rounded-2xl">
+                    <div class="text-2xl mb-2">🛡️</div>
+                    <h3 class="font-bold text-lg mb-2">VRAM Optimized</h3>
+                    <p class="text-sm text-gray-500">Sub-4GB footprint. Deploy a swarm of 100 agents on a single H100 cluster for massive-scale hunting.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture" class="mb-20">
+            <div class="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="flex-1">
+                        <h2 class="text-3xl font-bold mb-4">Architecture Innovation</h2>
+                        <p class="text-gray-600 mb-6">
+                            To beat 70B models, XLayer uses <strong>Speculative Decoding</strong> and a <strong>Security-First Tokenizer</strong>.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <span class="w-6 h-6 rounded bg-blue-100 text-blue-600 flex items-center justify-center text-xs font-bold">1</span>
+                                <div>
+                                    <h4 class="font-bold text-sm">Distilled Reasoning (D-CoT)</h4>
+                                    <p class="text-xs text-gray-500">Trained on 100M tokens of logic-traces from Llama-3-405B specifically for exploit pathfinding.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <span class="w-6 h-6 rounded bg-red-100 text-red-600 flex items-center justify-center text-xs font-bold">2</span>
+                                <div>
+                                    <h4 class="font-bold text-sm">Python Execution Feedback Loop</h4>
+                                    <p class="text-xs text-gray-500">If the generated script fails, the model receives the error in its context and rewrites the exploit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 w-full">
+                        <div class="chart-container">
+                            <canvas id="compChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="agent" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">XLayer Agent Logic Flow</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-[#1e1e1e] rounded-2xl p-6 font-mono text-sm h-[450px] overflow-hidden flex flex-col shadow-2xl">
+                    <div class="flex justify-between items-center mb-4 border-b border-white/10 pb-2">
+                        <span class="text-gray-400">XLAYER_OS v1.0</span>
+                        <div class="flex gap-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                    </div>
+                    <div id="terminal" class="flex-grow overflow-y-auto pr-2 custom-scrollbar space-y-3">
+                        <div class="text-green-400">root@xlayer:~# initialize_hunt --target hackerone_target</div>
+                        <div class="text-gray-400">Agent Status: Awaiting command...</div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm">
+                        <h3 class="font-bold mb-4">Manual Override: Threat Hunting Steps</h3>
+                        <div class="space-y-3">
+                            <button onclick="runStep(1)" id="b1" class="w-full text-left p-4 rounded-xl border transition-all hover:bg-gray-50 flex items-center justify-between group">
+                                <div>
+                                    <div class="font-bold">Phase 1: Surface Discovery</div>
+                                    <div class="text-xs text-gray-400">Scanning endpoints and mapping logic.</div>
+                                </div>
+                                <span class="opacity-0 group-hover:opacity-100">→</span>
+                            </button>
+                            <button onclick="runStep(2)" id="b2" class="w-full text-left p-4 rounded-xl border opacity-50 cursor-not-allowed transition-all" disabled>
+                                <div>
+                                    <div class="font-bold">Phase 2: Internal Exploit Synthesis</div>
+                                    <div class="text-xs text-gray-400">AI decides to write a custom Python script.</div>
+                                </div>
+                            </button>
+                            <button onclick="runStep(3)" id="b3" class="w-full text-left p-4 rounded-xl border opacity-50 cursor-not-allowed transition-all" disabled>
+                                <div>
+                                    <div class="font-bold">Phase 3: Sandbox Execution</div>
+                                    <div class="text-xs text-gray-400">Running script and parsing output.</div>
+                                </div>
+                            </button>
+                            <button onclick="runStep(4)" id="b4" class="w-full text-left p-4 rounded-xl border opacity-50 cursor-not-allowed transition-all" disabled>
+                                <div>
+                                    <div class="font-bold">Phase 4: Vulnerability Report</div>
+                                    <div class="text-xs text-gray-400">Final payload and mitigation logic.</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-blue-50 text-blue-800 rounded-xl text-xs leading-relaxed">
+                        <strong>Note:</strong> In this 1B model, "Deciding" occurs in a 2048-token reasoning block before any code is generated. This is why it surpasses Xbow's direct prompting.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Chart Implementation
+        function renderCharts() {
+            const ctx = document.getElementById('compChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['Reasoning Depth', 'Tool Speed', 'Token Efficiency', 'Accuracy', 'Local Privacy'],
+                    datasets: [{
+                        label: 'Xbow (General LLM)',
+                        data: [85, 40, 30, 90, 10],
+                        backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                        borderColor: '#3b82f6',
+                        pointBackgroundColor: '#3b82f6'
+                    }, {
+                        label: 'XLayer (Domain Specific 1B)',
+                        data: [92, 95, 98, 88, 100],
+                        backgroundColor: 'rgba(239, 68, 68, 0.2)',
+                        borderColor: '#ef4444',
+                        pointBackgroundColor: '#ef4444'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'bottom' } },
+                    scales: {
+                        r: { beginAtZero: true, max: 100, ticks: { display: false } }
+                    }
+                }
+            });
+        }
+
+        // Terminal Interaction Logic
+        const terminal = document.getElementById('terminal');
+        const steps = {
+            1: {
+                text: "[ANALYSIS] Port 443 active. Detected GraphQL endpoint.\n[THOUGHT] Introspection might be enabled. I will synthesize a schema-dump script.",
+                color: "text-blue-300"
+            },
+            2: {
+                text: "[SYNTHESIS] Writing custom python payload...\n\nimport requests\nq = '{__schema{queryType{name}}}'\nr = requests.post(url, json={'query': q})\nprint(r.text)",
+                color: "text-yellow-200"
+            },
+            3: {
+                text: "[EXECUTION] Sandbox running script...\n[RESULT] Query Success. 22 hidden mutations found.\n[REASONING] Mutation 'deleteUser' lacks auth check.",
+                color: "text-purple-300"
+            },
+            4: {
+                text: "[REPORT] IDOR Vulnerability found in GraphQL endpoint.\nSeverity: CRITICAL\nStatus: Ready for HackerOne submission.",
+                color: "text-red-400"
+            }
+        };
+
+        function runStep(s) {
+            const info = steps[s];
+            const div = document.createElement('div');
+            div.className = `${info.color} border-l-2 border-white/20 pl-3 py-1`;
+            div.innerText = info.text;
+            terminal.appendChild(div);
+            terminal.scrollTop = terminal.scrollHeight;
+
+            // Manage button states
+            document.getElementById(`b${s}`).classList.add('step-active');
+            if (s < 4) {
+                const next = document.getElementById(`b${s+1}`);
+                next.disabled = false;
+                next.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        }
+
+        function scrollToSec(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        window.onload = renderCharts;
+    </script>
+</body>
 </html>
